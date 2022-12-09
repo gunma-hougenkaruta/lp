@@ -1,469 +1,271 @@
-@charset "UTF-8";
-
-/* RESET */
-html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: 'proxima-nova', 'Proxima Nova', 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-  }
-
-body {
-  line-height: 1.0;
-  }
-
-img {
-  height: auto;
-  vertical-align: top;
-  font-size: 0;
-  line-height: 0;
-  border: 0;
-  }
-
-ol, ul {
-  list-style: none;
-  }
-
-a:hover {
-  -webkit-opacity: 0.6;
-  -moz-opacity: 0.6;
-  -o-opacity: 0.6;
-  filter: alpha(opacity=60); /* IE lt 8 */
-  -ms-filter: "alpha(opacity=50)"; /* IE 8 */
-  opacity: 0.6;
-  }
-
-a {
-  -webkit-transition: opacity 0.8s ease-out;
-  -moz-transition: opacity 0.8s ease-out;
-  -ms-transition: opacity 0.8s ease-out;
-  -o-transition: opacity 0.8s ease-out;
-  transition: opacity 0.8s ease-out;
-  }
-
-
-/* COMMON */
-.text-white {
-    color: #ffffff;
-  }
-
-.text-red {
-  color: #E83534;
-  }
-
-.inline-block{
-  display: inline-block;
+* {
+  box-sizing: border-box;
 }
 
-.os-info ul li a {
-  color : #3E8BC5;
-  font-weight : 600;
-  text-decoration : none;
-  }
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
 
-.attention {
-  padding-bottom : 20px;
-  }
+a {
+  text-decoration: none;
+}
 
-footer p{
-  text-align : center;
-  }
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 
-/* MainVisual */
-.main-visual {
-  background-color : #80c0a0;
-  }
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-image: url(top.png);
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
 
-/* Feature */
-.feature {
-  background-color :#E83534;
-  }
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+}
 
+.top-wrapper p {
+  opacity: 0.7;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
 
-/* OS-Info */
-.os-info > hr {
-  border: none;
-  height: 2px;
-  background-color: #000000;
-  }
+.btn-wrapper {
+  text-align: center;
+}
 
+.btn-wrapper p {
+  margin-bottom: 20px;
+}
 
-.notes-text > .small {
-  display:block;
-  margin-top:12px;
-  font-size:15px;
-  }
+.signup {
+  background-color: #239b76;
+}
 
-/*レスポンシブ*/
-@media screen and (max-width:768px) {
-  /*画面サイズが〜768px*/
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
 
-.pc {
-  display: none !important;
-  }
+.twitter {
+  background-color: #55acee;
+}
 
-.sp {
-  display: block !important;
-  }
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
 
-.section-inner {
-  width : 90%;
-  margin : 0 auto;
-  }
+.btn:hover {
+  opacity: 1;
+}
 
-/* MainVisual */
-.main-visual{
-  background-image: url("../img/mainvisual-bg-sp.png") ;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding-top:106%;
-  height: auto;
+.fa {
+  margin-right: 5px;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34,49,52,0.9);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 20px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.lesson-wrapper {
+  height: 580px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: #5f5d60;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+
+.lesson {
+  float: left;
+  width: 25%;
+}
+
+.lesson-icon {
   position: relative;
 }
 
-.visual-info p {
-  text-align : center;
-  font-size : 24px;
-  font-weight : 600;
-  line-height: 1.2;
-  padding-bottom:10px;
+.lesson-icon p {
   position: absolute;
-  top: 40px;
-  right: 0;
-  left: 0;
-  }
-
-.logo {
-  max-width:160px;
-  width : 32%;
-  margin : auto;
-  text-align: center;
-  position: absolute;
-  top: 26%;
-  right: 0;
-  left: 0;
-  }
-
-.fix-footer-forsp {
-  width :100%;
-  height : 74px;
-  background-color : rgba(255, 255, 255, 0.8);
-  position : fixed;
-  bottom : 0 ;
-  z-index : 999;
-  }
-
-.fix-footer-forsp:before{
-  content: '';
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  }
-
-.fix-footer-forsp > ul > li {
-  display : inline-block;
-  margin : 0 auto;
-  }
-
-.fix-footer-forsp > ul {
-  width : 90%;
-  display : flex;
-  justify-content: center;
-  align-items: center;
-  margin : 10px auto;
-  text-align:center;
-  }
-
-/* About */
-.about{
-  padding: 80px 0;
-  }
-
-.about > .section-inner > h1 > img {
-  display : block;
-  max-width : 420px;
-  margin : 0 auto 25px;
-  }
-
-.about p{
-  font-size : 18px;
-  line-height : 1.8;
-  font-weight : 600;
-  }
-
-.about-illust{
-  width: 79.2%;
-  display: block;
-  margin: 30px auto 0;
-  }
-
-/* Contents */
-.contents{
-  background-color: #232323;
-  padding: 70px 0;
-  }
-
-.contents h1{
-  font-size: 24px;
-  line-height:1.4;
-  text-align: center;
-  margin-bottom: 10px;
-  }
-
-/* Premium */
-.premium-title > img {
-  display : block;
-  max-width : 460px;
-  width : 80%;
-  margin : 0 auto;
-  padding : 60px 0 30px;
-  }
-
-.premium p{
-  font-size : 18px;
-  font-weight : 600;
-  line-height : 1.6;
-  margin-bottom: 20px;
-  }
-
-.premium-img {
-  max-width : 480px;
-  width : 100%;
-  padding-top : 10px;
-  display : block;
-  }
-
-.notes-text {
-  font-size : 16px;
-  line-height : 1.6;
-  font-weight : 600;
-  margin : 40px 0 0;
-  text-align: center;
-  }
-
-.os-info h2{
-  margin-top: 60px;
-  font-size: 18px;
-  }
-
-.os-info ul > li {
-  word-wrap : break-word;
-  }
-
-.android p, .ios p {
-  font-size :16px;
-  font-weight : 600;
-  margin : 30px 0 0;
-  line-height: 1.4;
-  }
-
-.os-info ul{
-  margin-bottom : 10px;
-  }
-
-.os-info ul li {
-  margin-top : 4px;
-  line-height:1.6;
-    }
-
-.attention{
-  line-height: 1.4;
-  }
-
-footer{
-  margin-top:80px;
-  padding:40px 0 100px;
-  background-color : #EEEEEE;
-  }
-
+  top: 37%;
+  width: 100%;
+  color: white;
 }
 
-
-@media screen and (min-width:769px) {
-    /*画面サイズが769px~ */
-
-/* COMMON */
-.sp {
-  display: none !important;
-  }
-
-.section-inner {
-  width: 900px;
-  height:auto;
-  margin: 0 auto;
-  }
-
-/* MainVisual */
-.main-visual-img{
-  background-image: url("../img/mainvisual-bg-pc.png") ;
-  max-width:1200px;
-  width:100%;
-  height:530px;  
-  background-position: 0% 20%; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 auto;
-}
-
-.main-visual-block{
-  width:764px;
-  margin:0 auto!important;
-  position:relative;
-}
-
-.visual-info {
-  width : 380px;
-  text-align:center;
-  padding-top:100px;
-  }
-
-.visual-info p {
-  font-size : 28px;
-  line-height:1.2;
-  font-weight:600;
-  text-align : center;
-  margin-bottom : 15px;
-  }
-
-
-img.logo{
-  width: 170px;
-  margin: 0 auto;
-  text-align:center;
-  }
-
-.dl-btn > li {
-  margin : 50px auto 90px;
+.text-contents {
+  width: 80%;
   display: inline-block;
-  }
-
-.dl-btn li :first-child {
-  margin-right : 2px;
-  }
-
-.visual-main {
-  position : absolute;
-  right : 0;
-  top:69px;
-  }
-
-/* About */
-.about{
-  width:900px;
-  padding:120px 0;
-  margin: 0 auto;
-  }
-
-h1{
-  width:100%;
-  text-align:center;
-  margin: 0 auto;
-  }
-
-.brief{
-  margin-top: 40px;
-  font-size : 26px;
-  text-align : center;
-  font-weight : 600;
-  line-height : 1.7;
-  }
-
-.about_p{
-  font-size : 18px;
-  text-align : center;
-  font-weight : 600;
-  line-height : 1.7;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #b3aeb5;
 }
 
-.about img{
-  display: block;
-  margin: 0 auto;
-  }
+.heading h3 {
+  font-weight: normal;
+}
 
-.about-illust{
-  width: 375px;
-  display: block;
-  padding: 26px 0 40px;
-  display: block;
-  }
-
-
-/* Contents */
-.contents {
-  padding : 120px 0;
-  background-color: #222222;
-  }
-
-.contents h1 {
-  font-size : 38px;
-  line-height: 1.4;
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
   text-align: center;
-  font-weight: 600;
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0px 7px #1a7940;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display: none;
+}
+
+.clear {
+  clear: left;
+}
+
+@media all and (max-width: 1000px) {
+  .lesson {
+    width: 50%;
+    margin-bottom: 50px;
   }
 
-.contents-list{
-  width: 820px;
-  margin: 25px auto 0;
-  text-align:center;
+  .lesson-wrapper {
+    height: 990px;
   }
 
+  footer {
+    text-align: center;
+  }
+}
 
-/* Premium */
-.premium {
-  padding: 120px 0 0;
+@media all and (max-width: 750px) {
+  .top-wrapper h1 {
+    font-size: 32px;
   }
 
-.premium p{
-  margin: 40px 0;
-  font-size : 18px;
-  font-weight : 600;
-  text-align : center;
-  line-height : 1.8;
+  .heading h2 {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 670px) {
+  .header-right {
+    display: none;
   }
 
-.premium img{
-  display:block;
-  margin: 0 auto;
+  .menu-icon {
+    display: block;
   }
 
-.app-dl-block img{
-  width: 820px;
-  display: block;
-  padding-top: 60px;
+  .top-wrapper .btn {
+    width: 100%;
   }
 
-.os-info {
-  width : 820px;
-  margin : 0 auto;
+  .twitter {
+    margin-top: 10px;
   }
 
-.os-info h2{
-  font-size:22px;
-  font-weight:600;
+  .top-wrapper {
+    text-align: left;
   }
 
-.android p, .ios p {
-  font-size :18px;
-  font-weight : 600;
-  margin : 30px 0 0;
+  .top-wrapper h1 {
+    font-size: 24px;
   }
 
-.os-info ul{
-  margin-bottom : 10px;
+  .top-wrapper p {
+    font-size: 14px;
   }
 
-.os-info ul li {
-  margin-top : 15px;
-    }
-
-footer{
-  margin-top:80px;
-  padding:40px 0 60px;
-  background-color : #EEEEEE;
+  .lesson {
+    width: 100%;
   }
 
+  .lesson-wrapper {
+    height: 1700px;
+  }
+
+  .message-wrapper .btn {
+    width: 100%;
+  }
 }
